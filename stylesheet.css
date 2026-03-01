@@ -6,7 +6,10 @@
 
 body {
     margin-bottom: 20px;
+    height: 100%;
     background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -16,7 +19,7 @@ nav {
     border-radius: 15px;
     padding: 20px 25px;
     background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     margin: 10px 0px;
     display: flex;
     align-items: center;
@@ -112,10 +115,9 @@ h2 {
 
 .masonry {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     grid-auto-rows: 10px;
-    gap: 12px;
-}
+    gap: 12px; }
 
 .masonry img {
     width: 100%;
@@ -129,4 +131,32 @@ h2 {
 }
 
 .masonry img.wide {
-    grid-row: span 15; }
+    grid-row: span 15; 
+}
+
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 370px;
+    gap: 12px;
+}
+
+.collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.collage .wide {
+    grid-column: span 3;
+}
+
+.collage .tall {
+    grid-row: span 2;
+}
+
+.collage .big {
+    grid-column: span 3;
+    grid-row: span 2; }
